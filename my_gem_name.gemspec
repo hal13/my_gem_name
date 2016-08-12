@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["hal13"]
   spec.email         = ["a15z8my@aiit.ac.jp"]
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
+  spec.summary       = %q{Return your BMI}
+  spec.description   = %q{Return your BMI and Best Weight}
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

@@ -3,10 +3,13 @@ require "my_gem_name/version"
 module MyGemName
   class MyGemName
     def calcBmi(h, w)
-
-      if h <= 3
-        $stderr.print "height input cm"
-        exit!
+      begin
+        if h.class() == Float
+          exit(1)
+        end
+      rescue SystemExit
+        $stderr.puts "input your height as cm"
+        return false
       end
 
       w_h = h.to_f / 100

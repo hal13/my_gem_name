@@ -9,10 +9,7 @@ class MyGemNameTest < Minitest::Test
   end
 
   def test_bmi
-    assert_silent do 
-      @main.calcBmi(1.68,52)
-    end
     assert_output(/^Your BMI.*Your Best Weight.*/m) {@main.calcBmi(175,57)}
-    assert_output(stdout=nil, "height input cm") {@main.calcBmi(1.75,57)}
+    assert_output(stdout=nil, /^input your height as cm.*/m) {@main.calcBmi(1.75,57)}
   end
 end
